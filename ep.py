@@ -84,7 +84,7 @@ os.system("python sudoku.py")
 image(p, "sudoku.png")
 
 dt = datetime.now(timezone.utc)
-text(p, "\n" + dt.isoformat("Z"))
+text(p, "\n" + dt.replace(tzinfo=None).isoformat("Z"))
 text(p, "cloudflare.com")
 
 p.cut()
